@@ -1,0 +1,21 @@
+name: 'Saludo'
+description: 'saludos'
+
+inputs:
+  name:
+    description: 'Nombre'
+    required: true
+    type: string
+outputs:
+  saludo:
+    description: 'salida saludo'
+    value: ${{ steps.devolver-saludo.outputs.saludo-final }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: imprimir nombre
+      run: echo ${{ inputs.name }}
+    - name: devolver saludo
+      id: devolver-saludo
+      run: echo "saludo-final= Hola $(echo ${{ inputs.name }})" >> $GITHUB_OUTPUT
