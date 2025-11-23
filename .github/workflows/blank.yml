@@ -47,5 +47,5 @@ jobs:
         with:
           a: 4
           b: 2
-      - run: echo "Resultado final: ${{ steps.resultado.outputs.results }}"
+      - run: echo 'Resultado final: ${{ steps.resultado.outputs.results }}'
         
