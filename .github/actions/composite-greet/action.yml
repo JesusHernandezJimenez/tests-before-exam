@@ -19,3 +19,4 @@ runs:
     - name: devolver saludo
       id: devolver-saludo
       run: echo "saludo-final= Hola $(echo ${{ inputs.name }})" >> $GITHUB_OUTPUT
+      shell: bash
