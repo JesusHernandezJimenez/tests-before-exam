@@ -5,12 +5,12 @@ try {
   const a = Number(core.getInput('a'));
   const b = Number(core.getInput('b'));
 
-  const result = a * b;
+  const results = a * b;
 
-  console.log(`Resultado de ${a} × ${b} = ${result}`);
+  console.log(`Resultado de ${a} × ${b} = ${results}`);
 
   // Exportar output
-  core.setOutput('result', result);
+  core.setOutput('results', results);
 
 } catch (error) {
   core.setFailed(error.message);
