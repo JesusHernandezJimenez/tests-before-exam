@@ -27,6 +27,6 @@ jobs:
     steps:
       - name: imprimir valores usando env
         run: |
-          echo "$ACTOR"
+          echo $ACTOR
           echo ${{ env.COMMIT_SHA }} 
         
