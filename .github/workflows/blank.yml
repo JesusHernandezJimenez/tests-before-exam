@@ -38,4 +38,14 @@ jobs:
         with:
           name: 'jesus'
       - run: echo "${{ steps.foo.outputs.saludo }}"
+  usar-javascript-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - id: resultado
+        uses: ./.github/actions/js-multiply
+        with:
+          a: 4
+          b: 2
+      - run: echo "Resultado final: ${{ steps.resultado.outputs.results }}"
         
