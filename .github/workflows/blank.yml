@@ -1,0 +1,14 @@
+name: TEST
+
+on: push
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Imprimir el nombre del ACTO
+        run: echo $GITHUB_ACTOR
+
+      - name: Imprimir commit SHA
+        run: echo $GITHUB_SHA
