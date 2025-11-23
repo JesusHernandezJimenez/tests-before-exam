@@ -1,0 +1,15 @@
+name: "Action de Docker container"
+description: "Ejemplo de un action"
+
+inputs:
+  message:
+    description: "mensaje como input"
+    type: string
+    required: true
+outputs:
+  uppercase_message:
+    description: "mensaje de salida en MAYUSCULAS"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"

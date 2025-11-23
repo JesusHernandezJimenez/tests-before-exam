@@ -48,4 +48,12 @@ jobs:
           a: 4
           b: 2
       - run: echo Resultado final ${{ steps.resultado.outputs.results }}
-        
+  user-docker-action:
+    runs-on: ubunut-latest
+    steps:
+      - uses: actions/checkout@v5
+      - id: salida
+        uses: ./.github/actions/docker-hello
+        with:
+          message: "hola mundo"
+      - run: echo UpperCase ${{ steps.salida.outputs.uppercase_message }}
