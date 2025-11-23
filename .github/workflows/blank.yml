@@ -2,6 +2,9 @@ name: TEST
 
 on: push
 
+env:
+  ACTOR: $GITHUB_ACTOR
+  COMMIT_SHA: $GITHUB_SHA
 jobs:
   info:
     runs-on: ubuntu-latest
@@ -19,4 +22,11 @@ jobs:
         run: |
           echo ${{ github.actor }}
           echo ${{ github.sha }}
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprimir valores usando env
+        run: |
+          echo ${{ env.ACTOR }}
+          echo ${{ env.COMMIT_SHA }} 
         
