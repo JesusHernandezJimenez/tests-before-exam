@@ -29,4 +29,12 @@ jobs:
         run: |
           echo "$ACTOR"
           echo ${{ env.COMMIT_SHA }} 
+  usar-action:
+    runs-on: ubuntu-latest
+    steps:
+      - id: foo
+        uses: ./.github/actions/composite-greet
+        with:
+          name: 'jesus'
+      - run: "Saludo: ${{ steps.foo.outputs.saludo }}"
         
