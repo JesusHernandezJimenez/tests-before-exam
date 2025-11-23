@@ -3,8 +3,8 @@ name: TEST
 on: push
 
 env:
-  ACTOR: $GITHUB_ACTOR
-  COMMIT_SHA: $GITHUB_SHA
+  ACTOR: ${{ github.actor }}
+  COMMIT_SHA: ${{ github.sha }}
 jobs:
   info:
     runs-on: ubuntu-latest
