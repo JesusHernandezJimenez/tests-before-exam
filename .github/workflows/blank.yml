@@ -12,3 +12,11 @@ jobs:
 
       - name: Imprimir commit SHA
         run: echo $GITHUB_SHA
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir lo mismo pero con la propiedad del github
+        run: |
+          echo ${{ github.actor }}
+          echo ${{ github.sha }}
+        
