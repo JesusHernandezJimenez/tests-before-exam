@@ -37,5 +37,5 @@ jobs:
         uses: ./.github/actions/composite-greet
         with:
           name: 'jesus'
-      - run: echo "Hola ${{ steps.foo.outputs.saludo }}"
+      - run: echo "${{ steps.foo.outputs.saludo }}"
         
